@@ -1,0 +1,22 @@
+name: Deploy Redis
+description: "Deploy Redis to a Kubernetes cluster"
+inputs:
+  credentials:
+    description: "GCP service account credentials"
+    required: true
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: "20"
+        cache: "yarn"
+    - run: yarn install
+      shell: bash
+    - uses: "google-github-actions/auth@v1"
+      with:
+        credentials_json: "${{ inputs.credentials }}"
+    - run: printenv
+      shell: bash
+    - run: cat $GOOGLE_GHA_CREDS_PATH
+      shell: bash

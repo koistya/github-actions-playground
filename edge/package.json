@@ -1,0 +1,12 @@
+{
+  "name": "edge",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "echo \"build\"",
+    "deploy": "echo \"deploy\"",
+    "edge:build": "yarn build",
+    "edge:deploy": "yarn deploy"
+  }
+}

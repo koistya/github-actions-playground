@@ -1,0 +1,15 @@
+{
+  "name": "github-actions",
+  "version": "0.0.0",
+  "packageManager": "yarn@4.0.0-rc.48",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "api",
+    "app",
+    "edge"
+  ],
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+}
